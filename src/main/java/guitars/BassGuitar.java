@@ -3,10 +3,10 @@ package guitars;
 import behaviours.IPlay;
 import behaviours.ISell;
 
-public class BassGuitar extends Guitar implements IPlay, ISell {
+public class BassGuitar extends Guitar implements IPlay {
 
-    public BassGuitar(String type, String brand, String model, String colour, double coastPrice) {
-        super(type, brand, model, colour, coastPrice);
+    public BassGuitar(GuitarType type, String brand, String model, String colour, double costPrice) {
+        super(type, brand, model, colour, costPrice);
     }
 
     public String play() {
@@ -14,6 +14,7 @@ public class BassGuitar extends Guitar implements IPlay, ISell {
     }
 
     public double sell() {
-        return getCoastPrice() * 2.2;
+        double markup = getCostPrice() * 2.2;
+        return setSellPrice(markup);
     }
 }

@@ -1,18 +1,20 @@
 package accessories;
 
-public abstract class Accessory {
+import behaviours.ISell;
+
+public abstract class Accessory implements ISell {
 
     private String type;
     private String brand;
     private String model;
-    private double coastPrice;
-    private double sellPrice;
+    public double costPrice;
+    public double sellPrice;
 
-    public Accessory(String type, String brand, String model, double coastPrice) {
+    public Accessory(String type, String brand, String model, double costPrice) {
         this.type = type;
         this.brand = brand;
         this.model = model;
-        this.coastPrice = coastPrice;
+        this.costPrice = costPrice;
         this.sellPrice = 0;
     }
 
@@ -28,8 +30,8 @@ public abstract class Accessory {
         return model;
     }
 
-    public double getCoastPrice() {
-        return coastPrice;
+    public double getCostPrice() {
+        return costPrice;
     }
 
     public double getSellPrice() {
@@ -38,5 +40,9 @@ public abstract class Accessory {
 
     public double setSellPrice(double newSellPrice) {
         return sellPrice = newSellPrice;
+    }
+
+    public double calculateMarkup() {
+        return sell() - costPrice;
     }
 }

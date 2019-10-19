@@ -1,9 +1,8 @@
-import guitars.AcousticGuitar;
+import guitars.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class AcousticGuitarTest {
 
@@ -11,13 +10,13 @@ public class AcousticGuitarTest {
 
     @Before
     public void before() {
-        acousticGuitar = new AcousticGuitar("Acoustic guitars.Guitar", "Taylor", "Baby BT2" , "beije", 150.00);
+        acousticGuitar = new AcousticGuitar(GuitarType.ACOUSTIC_GUITAR, "Taylor", "Baby BT2" , "beije", 150.00);
 
     }
 
     @Test
     public void hasType() {
-        assertEquals("Acoustic guitars.Guitar", acousticGuitar.getType());
+        assertEquals(GuitarType.ACOUSTIC_GUITAR, acousticGuitar.getType());
     }
 
     @Test
@@ -36,8 +35,8 @@ public class AcousticGuitarTest {
     }
 
     @Test
-    public void hasCoastPrice() {
-        assertEquals(150.00, acousticGuitar.getCoastPrice(), 0.1);
+    public void hasCostPrice() {
+        assertEquals(150.00, acousticGuitar.getCostPrice(), 0.1);
     }
 
     @Test

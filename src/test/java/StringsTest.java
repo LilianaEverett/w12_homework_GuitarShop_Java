@@ -29,8 +29,8 @@ public class StringsTest {
     }
 
     @Test
-    public void hasCoastPrice() {
-        assertEquals(2.00, strings.getCoastPrice(), 0.1);
+    public void hasCostPrice() {
+        assertEquals(2.00, strings.getCostPrice(), 0.1);
     }
 
     @Test

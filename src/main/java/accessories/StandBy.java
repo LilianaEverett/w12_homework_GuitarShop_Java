@@ -2,13 +2,14 @@ package accessories;
 
 import behaviours.ISell;
 
-public class StandBy extends Accessory implements ISell {
+public class StandBy extends Accessory {
 
-    public StandBy(String type, String brand, String model, double coastPrice) {
-        super(type, brand, model, coastPrice);
+    public StandBy(String type, String brand, String model, double costPrice) {
+        super(type, brand, model, costPrice);
     }
 
     public double sell() {
-        return getCoastPrice() * 2.9;
+        double markup = getCostPrice() * 2.9;
+        return setSellPrice(markup);
     }
 }

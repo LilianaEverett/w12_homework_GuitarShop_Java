@@ -2,13 +2,14 @@ package accessories;
 
 import behaviours.ISell;
 
-public class Pedal extends Accessory implements ISell {
+public class Pedal extends Accessory {
 
-    public Pedal(String type, String brand, String model, double coastPrice) {
-        super(type, brand, model, coastPrice);
+    public Pedal(String type, String brand, String model, double costPrice) {
+        super(type, brand, model, costPrice);
     }
 
     public double sell() {
-        return getCoastPrice() * 3;
+        double markup = getCostPrice() * 3;
+        return setSellPrice(markup);
     }
 }

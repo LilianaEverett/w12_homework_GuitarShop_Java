@@ -1,24 +1,26 @@
 package guitars;
 
-public abstract class Guitar {
+import behaviours.ISell;
 
-    private String type;
+public abstract class Guitar implements ISell {
+
+    private GuitarType type;
     private String brand;
     private String model;
     private String colour;
-    private double coastPrice;
-    private double sellPrice;
+    public double costPrice;
+    public double sellPrice;
 
-    public Guitar (String type, String brand, String model, String colour, double coastPrice) {
+    public Guitar (GuitarType type, String brand, String model, String colour, double costPrice) {
         this.type = type;
         this.brand = brand;
         this.model = model;
         this.colour = colour;
-        this.coastPrice = coastPrice;
+        this.costPrice = costPrice;
         this.sellPrice = 0;
     }
 
-    public String getType() {
+    public GuitarType getType() {
         return type;
     }
 
@@ -34,8 +36,8 @@ public abstract class Guitar {
         return colour;
     }
 
-    public double getCoastPrice() {
-        return coastPrice;
+    public double getCostPrice() {
+        return costPrice;
     }
 
     public double getSellPrice() {
@@ -44,5 +46,9 @@ public abstract class Guitar {
 
     public double setSellPrice(double newSellPrice) {
         return sellPrice = newSellPrice;
+    }
+
+    public double calculateMarkup() {
+        return sell() - costPrice;
     }
 }
