@@ -1,3 +1,4 @@
+import accessories.AccessoryType;
 import accessories.Strings;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,12 +11,12 @@ public class StringsTest {
 
     @Before
     public void before() {
-        strings = new Strings("Strings", "Ernie Ball", "Super Slinky 2223", 2.00);
+        strings = new Strings(AccessoryType.STRINGS, "Ernie Ball", "Super Slinky 2223", 2.00);
     }
 
     @Test
     public void hasType() {
-        assertEquals("Strings", strings.getType());
+        assertEquals(AccessoryType.STRINGS, strings.getType());
     }
 
     @Test

@@ -4,7 +4,7 @@ import behaviours.ISell;
 
 public class Strap extends Accessory {
 
-    public Strap(String type, String brand, String model, double costPrice) {
+    public Strap(AccessoryType type, String brand, String model, double costPrice) {
         super(type, brand, model, costPrice);
     }
 

@@ -19,8 +19,8 @@ public class ShopTest {
     public void before() {
         electricGuitar = new ElectricGuitar(GuitarType.ELECTRIC_GUITAR, "Dean", "Vendetta XM Tremolo", "metallic red", 45.00);
         acousticGuitar = new AcousticGuitar(GuitarType.ACOUSTIC_GUITAR, "Taylor", "Baby BT2" , "beije", 150.00);
-        standBy = new StandBy("guitar stand","Ortega", "OGS-1BK", 5.00);
-        strings = new Strings("Strings", "Ernie Ball", "Super Slinky 2223", 2.00);
+        standBy = new StandBy(AccessoryType.STAND,"Ortega", "OGS-1BK", 5.00);
+        strings = new Strings(AccessoryType.STRINGS, "Ernie Ball", "Super Slinky 2223", 2.00);
         shop = new Shop("Strings & Things");
         shop.addItem(acousticGuitar);
         shop.addItem(strings);

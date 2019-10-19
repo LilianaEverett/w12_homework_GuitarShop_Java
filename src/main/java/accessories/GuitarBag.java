@@ -4,7 +4,7 @@ import behaviours.ISell;
 
 public class GuitarBag extends Accessory {
 
-    public GuitarBag(String type, String brand, String model, double costPrice) {
+    public GuitarBag(AccessoryType type, String brand, String model, double costPrice) {
         super(type, brand, model, costPrice);
     }
 

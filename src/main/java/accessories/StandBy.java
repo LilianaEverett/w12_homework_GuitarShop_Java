@@ -4,7 +4,7 @@ import behaviours.ISell;
 
 public class StandBy extends Accessory {
 
-    public StandBy(String type, String brand, String model, double costPrice) {
+    public StandBy(AccessoryType type, String brand, String model, double costPrice) {
         super(type, brand, model, costPrice);
     }
 

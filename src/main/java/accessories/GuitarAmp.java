@@ -2,7 +2,7 @@ package accessories;
 
 public class GuitarAmp extends Accessory {
 
-    public GuitarAmp(String type, String brand, String model, double costPrice) {
+    public GuitarAmp(AccessoryType type, String brand, String model, double costPrice) {
         super(type, brand, model, costPrice);
     }
 

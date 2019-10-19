@@ -4,13 +4,13 @@ import behaviours.ISell;
 
 public abstract class Accessory implements ISell {
 
-    private String type;
+    private AccessoryType type;
     private String brand;
     private String model;
     public double costPrice;
     public double sellPrice;
 
-    public Accessory(String type, String brand, String model, double costPrice) {
+    public Accessory(AccessoryType type, String brand, String model, double costPrice) {
         this.type = type;
         this.brand = brand;
         this.model = model;
@@ -18,7 +18,7 @@ public abstract class Accessory implements ISell {
         this.sellPrice = 0;
     }
 
-    public String getType() {
+    public AccessoryType getType() {
         return type;
     }
 

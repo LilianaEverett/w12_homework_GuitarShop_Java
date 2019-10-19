@@ -4,7 +4,7 @@ import behaviours.ISell;
 
 public class Pedal extends Accessory {
 
-    public Pedal(String type, String brand, String model, double costPrice) {
+    public Pedal(AccessoryType type, String brand, String model, double costPrice) {
         super(type, brand, model, costPrice);
     }
 
